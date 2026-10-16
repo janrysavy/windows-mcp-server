@@ -40,6 +40,10 @@ go.work.sum
 
 # Logs and scratch files
 *.log
+__pycache__/
+/sandbox-results/
+/controller-private/
+/mcp-transport/
 *.bak
 
 # golangci-lint SARIF output (see .golangci.yml output settings)

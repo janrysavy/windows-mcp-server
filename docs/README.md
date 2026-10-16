@@ -14,6 +14,8 @@ what you are trying to do.
 
 ## Setup and configuration
 
+For an offline Windows Sandbox, see [MCP stdio through mapped files](windows-sandbox-stdio.md).
+
 | Guide | For |
 |---|---|
 | [Getting started](getting-started.md) | Build, first run, connecting an MCP client, and the two things to do before pointing it at anything real |
