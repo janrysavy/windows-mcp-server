@@ -1,0 +1,27 @@
+[
+  {
+    "Package": "internal/desktop",
+    "Binary": "internal-desktop.test.exe",
+    "Sha256": "D7B1CD75E5EC53786356D5FEDC0CAC668298CE36BBD3D729F7F34B1E9EFB9BF8"
+  },
+  {
+    "Package": "internal/psdata",
+    "Binary": "internal-psdata.test.exe",
+    "Sha256": "F06ABB5DBB814D2306947BFA2C7BACD2E7D3568D4C20A6A39CCFEF20CD9A95A4"
+  },
+  {
+    "Package": "internal/winmcp",
+    "Binary": "internal-winmcp.test.exe",
+    "Sha256": "BBDF83C6BF1B6C5400D79C06C63F52420F838FBDCB37CDEAAE4D8DAC48488A87"
+  },
+  {
+    "Package": "pkg/windows",
+    "Binary": "pkg-windows.test.exe",
+    "Sha256": "1958E029489463B93CA13CDC8FC423EBF56C2223543119E3900A6332379D1D48"
+  },
+  {
+    "Package": "internal/acceptance",
+    "Binary": "internal-acceptance.test.exe",
+    "Sha256": "7D3FC2A63BF7D5538EC4FA2E62D96A5B3F42A24EC687EA38DD8523BAAA025026"
+  }
+]

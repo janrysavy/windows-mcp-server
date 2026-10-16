@@ -1,0 +1,7 @@
+=== RUN   TestScreenshotProducesPNG
+--- PASS: TestScreenshotProducesPNG (0.10s)
+=== RUN   TestScreenshotProducesPNG
+--- PASS: TestScreenshotProducesPNG (0.09s)
+=== RUN   TestScreenshotProducesPNG
+--- PASS: TestScreenshotProducesPNG (0.09s)
+PASS

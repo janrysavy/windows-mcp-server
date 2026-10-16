@@ -106,6 +106,21 @@ activation, Unicode typing, button invocation, independently recorded guest
 readback, and a PNG screenshot. The fixture must already be open; the test
 refuses physical input if it cannot verify its foreground window.
 
+On the integrated fork, it also checks `Win32Windows` hierarchy, Unicode text,
+hidden/password controls, result limits and wrong-PID rejection. Launch the
+fixture through `C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe`
+to exercise 64-bit server to 32-bit controls, as used in the saved acceptance.
+
+For the full compiled test binaries, run `scripts/sandbox/prepare_tests.ps1
+-InputRoot D:\SandboxInput` on the host, then run `C:\BuildInput\run_tests_guest.ps1`
+with `wsb exec -r ExistingLogin`. This stages only the required fixture folders,
+compiles tests on the host, and executes them exclusively in the guest. Raw logs
+and statuses go to a fresh private directory per run. The runner uses
+`-NoNewWindow`: a new console caused BitBlt invalid-handle failures in this guest,
+including with the unchanged upstream test binary. The separate weave VM
+acceptance/recorder suite remains gated off; its skips are recorded explicitly.
+Vet is run separately because Go 1.27.2 reports two unchanged upstream warnings.
+
 `Type` and `Click` use physical guest input: activate and inspect the intended
 window before using them, and verify the application's result. For controls
 exposing UIA patterns, prefer `Invoke` with `action=set_value` or `action=invoke`.
