@@ -18,9 +18,29 @@ MAX_FRAME_BYTES = 16 * 1024 * 1024
 
 
 def publish(path, data):
-    temporary = path.with_suffix(".tmp")
+    temporary = path.with_name(path.name + "." + uuid.uuid4().hex + ".tmp")
     temporary.write_text(data, encoding="utf-8")
-    os.replace(temporary, path)
+    deadline = time.monotonic() + 5
+    while True:
+        try:
+            os.replace(temporary, path)
+            break
+        except PermissionError:
+            if time.monotonic() >= deadline:
+                raise
+            time.sleep(0.03)
+
+
+def read_published(path, timeout=5):
+    """Retry mapped-file visibility/sharing delays without replaying a request."""
+    deadline = time.monotonic() + timeout
+    while True:
+        try:
+            return path.read_text(encoding="utf-8-sig")
+        except (PermissionError, FileNotFoundError):
+            if time.monotonic() >= deadline:
+                raise
+            time.sleep(0.03)
 
 
 def serve(args):
@@ -69,7 +89,7 @@ def serve(args):
         while True:
             response = outgoing / f"{index:08d}.json"
             if response.exists():
-                line = response.read_text(encoding="utf-8-sig")
+                line = read_published(response)
                 json.loads(line)
                 sys.stdout.write(line.rstrip("\r\n") + "\n")
                 sys.stdout.flush()
