@@ -1,0 +1,21 @@
+{
+  "Date": "2026-10-17",
+  "Go": "1.27.2 windows/amd64",
+  "Base": "3da251abb639b973af6f0c3a4ad23cf2c1cd2746",
+  "ServerSha256": "e7207414278ce2170334bfb1712f52605fda394c45b004c300bc319aff4b7064",
+  "Networking": "Disabled",
+  "Checks": [
+    "guest fixture enumerated in Snapshot",
+    "Type completed against fixture edit",
+    "Invoke completed against fixture button",
+    "guest PNG screenshot returned over file relay"
+  ],
+  "Fixture": {
+    "Computer": "CC8FB5B2-5B25-4",
+    "User": "WDAGUtilityAccount",
+    "PID": 4548,
+    "Text": "sandbox-only probe žluťoučký 🎯 5eff531e",
+    "Applied": true
+  },
+  "Passed": true
+}
