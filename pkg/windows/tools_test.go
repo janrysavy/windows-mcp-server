@@ -52,9 +52,8 @@ func TestAllToolsValid(t *testing.T) {
 
 // TestExpectedToolCount guards against accidental tool loss/addition.
 func TestExpectedToolCount(t *testing.T) {
-	// 35 since LaunchExecutable was split out of App's launch_executable mode, so
-	// arbitrary code execution sits in the shell toolset rather than in apps.
-	const want = 35
+	// Win32Windows adds native HWND inspection independently of the UIA tree.
+	const want = 36
 	if got := len(AllTools()); got != want {
 		t.Errorf("tool count = %d, want %d (update this test intentionally)", got, want)
 	}
@@ -100,7 +99,7 @@ func TestPersonasHaveGuidance(t *testing.T) {
 // as such (so --read-only and read-only personas expose them).
 func TestReadOnlyToolsAreSafe(t *testing.T) {
 	readOnly := map[string]bool{
-		"Snapshot": true, "Screenshot": true, "DisplayInventory": true,
+		"Snapshot": true, "Win32Windows": true, "Screenshot": true, "DisplayInventory": true,
 		"Wait": true, "WaitFor": true, "Scrape": true, "GetText": true,
 		"Assert": true, "CaptureEvidence": true, "SystemInfo": true,
 		"Plan": true, "EventLog": true, "Network": true,

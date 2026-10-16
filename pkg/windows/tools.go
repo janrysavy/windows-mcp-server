@@ -15,6 +15,7 @@ func AllTools() []inventory.ServerTool {
 	return []inventory.ServerTool{
 		// screen toolset
 		Snapshot(),
+		Win32Windows(),
 		Screenshot(),
 		DisplayInventory(),
 		Recording(),
