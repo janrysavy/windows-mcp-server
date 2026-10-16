@@ -90,6 +90,14 @@ response deadline; the guest's 15-minute bound remains. Requests are limited to
 16 MiB each. This first adapter serializes file publication, while MCP request
 IDs are preserved and responses may arrive out of order.
 
+The host retries transient sharing/visibility failures while reading a published
+response for up to five seconds, and PermissionError on its same atomic rename
+for up to five seconds. It never resends the corresponding MCP request. Unique
+temporary names avoid concurrent stop-marker collisions. A persistent failure
+still ends the connection; inspect private records before retrying a mutation,
+because its outcome may be unknown. Host-only regression checks are runnable
+with `python -m unittest discover -s scripts/sandbox -p "test_*.py" -v`.
+
 The served toolsets are `screen,interaction,apps`; Recording is excluded. Shell,
 registry, filesystem and package tools are not selected. Upstream posture/audit
 behavior stays intact. A trusted guest can still interfere with every guest app;
@@ -120,6 +128,12 @@ and statuses go to a fresh private directory per run. The runner uses
 including with the unchanged upstream test binary. The separate weave VM
 acceptance/recorder suite remains gated off; its skips are recorded explicitly.
 Vet is run separately because Go 1.27.2 reports two unchanged upstream warnings.
+
+The NoNewWindow result is a controlled observation, not a guarantee of screen
+capture. Later live installer work also returned BitBlt invalid-handle errors
+with the MCP's no-window launch. Graphics capture/physical input require a usable
+interactive guest desktop. Native inspection can still work when capture fails;
+an application error or failed observation does not prove the VM has terminated.
 
 `Type` and `Click` use physical guest input: activate and inspect the intended
 window before using them, and verify the application's result. For controls

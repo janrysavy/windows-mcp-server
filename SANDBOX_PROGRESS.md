@@ -104,3 +104,33 @@ defines 0x80370106 as unexpected VM/container exit. A recent
 reports similar mid-session crashes on other builds; it does not establish our
 root cause. Accessible event-log queries found no matching error. No Windows
 updates were removed, host settings changed or host restart attempted.
+
+## 2026-10-17 — mapped response sharing retry
+
+During the real VS6 installation, a fresh MCP connection failed while reading
+its initialize response with host PermissionError (errno 13). The same 243-byte
+file was readable on reinspection and contained the expected server identity;
+the guest remained live. No UI action had been sent on the failed connection.
+`feature/sandbox-transport-sharing` adds a bounded five-second retry of response
+reads for sharing/visibility races. It never resends a request or replays an
+unknown UI action. Persistent failures still stop the connection. Host publication
+now uses unique temporary filenames so EOF/error shutdown paths cannot race on
+the same stop-marker temporary file. Three host-only transport tests cover these
+cases; guest integration validation follows. No Go/server code changes.
+
+The new concurrent-publication test itself exposed Windows PermissionError on
+overlapping atomic replacements, even with unique temporary names. Publication
+now retries that same rename for up to five seconds. It does not create a second
+request frame. The initial failed test is recorded here rather than treated as
+a passing check. A documentation patch context mismatch was rejected and fixed.
+
+All three transport tests now pass. A real VS6 connection subsequently completed
+initialization, native child-window inspection, UIA snapshots and a first
+component click. The installer independently reported the expected size change.
+The caller then stopped on a changed-foreground guard, without replaying that
+click. A later Screenshot returned a genuine BitBlt invalid-handle tool error,
+which the relay delivered correctly. This also shows that NoNewWindow is not a
+universal screenshot fix: it passed the earlier controlled tests, but guest
+graphics availability still needs checking. Native enumeration remained usable
+and the VM/installer stayed live. Background scoped Win32 messages completed the
+remaining installer choices with explicit size readbacks outside this transport.
