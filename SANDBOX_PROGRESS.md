@@ -56,3 +56,51 @@ minutes; the VMMS log was absent. The cause remains unknown. The fresh guest
 passed the fork baseline test, including Czech characters and an emoji in real
 typing/readback. [Sanitized evidence](docs/validation/sandbox-transport.json).
 No host VM feature, networking, firewall, UAC or reboot changes were made.
+
+## 2026-10-17 — integrated native inspection and guest acceptance
+
+Both feature branches were merged into `integration/sandbox-spy`. Acceptance
+work is on `feature/sandbox-acceptance`, based on that integration.
+
+The combined Go 1.27.2 build passed the real MCP smoke test against a **32-bit**
+Windows Forms guest fixture: Unicode typing and WM_GETTEXT readback, Invoke,
+native parent/child HWNDs, class/style/control-ID records, hidden descendants,
+password omission, result-count enforcement, wrong-PID rejection and PNG
+delivery. [Evidence](docs/validation/sandbox-integration-x86.json).
+No message tracing or arbitrary window-message tool was added.
+
+All five compiled guest test binaries now exit 0: **151 PASS records, 14 SKIP
+records, no failures**. Counts include subtests. Thirteen skips belong to the
+separate, gated weave VM acceptance/recorder workflow; one checks refusal of
+unelevated enforcement and skips because this guest is elevated. Those paths
+were not claimed as exercised.
+[Results and logs](docs/validation/guest-unit-tests/results.json).
+There are no tests in the command package. The official MCP conformance suite
+and golangci-lint were not run. Go vet still has the two baseline warnings.
+
+Failed harness attempts are preserved:
+
+- The first complete test run printed PASS but recorded null ExitCode values;
+  it was not accepted. Retaining the native Process handle and waiting without
+  Refresh fixed exit-code collection. Later runs use unique output directories
+  so they do not overwrite prior evidence.
+- The second run failed Screenshot with `BitBlt: The handle is invalid`.
+  An unchanged baseline reproduced it five times when launched with a new
+  console. Using `-NoNewWindow`, consistent with the MCP server's CreateNoWindow,
+  passed three baseline repeats and then the full suite. No screenshot engine
+  source change was needed. [Failed and controlled logs](docs/validation/console-capture-failure/).
+- A staging script tried to copy a nonexistent `conformance` directory; the
+  current upstream moved that component into its shared core. The reproducible
+  preparer copies only actual fixture directories (`policy`, `journeys`, `schema`).
+- Some ad-hoc rg searches used a literal Windows wildcard in a path; they
+  failed and were replaced by directory searches with a file glob.
+- A documentation patch used context from the progress file against the setup
+  guide; the patch was rejected without changing files, then corrected.
+
+The old Sandbox crash is tracked as **unresolved**. Microsoft's
+[HCS code reference](https://learn.microsoft.com/en-us/virtualization/api/hcs/reference/hcshresult)
+defines 0x80370106 as unexpected VM/container exit. A recent
+[Sandbox issue #132](https://github.com/microsoft/Windows-Sandbox/issues/132)
+reports similar mid-session crashes on other builds; it does not establish our
+root cause. Accessible event-log queries found no matching error. No Windows
+updates were removed, host settings changed or host restart attempted.

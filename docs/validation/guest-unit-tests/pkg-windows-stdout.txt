@@ -1,0 +1,53 @@
+=== RUN   TestFileSystemRefusesProtectedPaths
+--- PASS: TestFileSystemRefusesProtectedPaths (0.00s)
+=== RUN   TestFileSystemAllowsUnprotectedPaths
+--- PASS: TestFileSystemAllowsUnprotectedPaths (0.00s)
+=== RUN   TestPackageRefusesRemoteInstallers
+--- PASS: TestPackageRefusesRemoteInstallers (0.00s)
+=== RUN   TestProtectedPathFoldsWindowsSpellings
+--- PASS: TestProtectedPathFoldsWindowsSpellings (0.00s)
+=== RUN   TestProtectedTreeFoldsSpellings
+--- PASS: TestProtectedTreeFoldsSpellings (0.00s)
+=== RUN   TestProductResultShapesMatchLatestSpec
+--- PASS: TestProductResultShapesMatchLatestSpec (0.03s)
+=== RUN   TestAllToolsValid
+--- PASS: TestAllToolsValid (0.00s)
+=== RUN   TestExpectedToolCount
+--- PASS: TestExpectedToolCount (0.00s)
+=== RUN   TestPersonasReferenceRealToolsets
+--- PASS: TestPersonasReferenceRealToolsets (0.00s)
+=== RUN   TestPersonasHaveGuidance
+--- PASS: TestPersonasHaveGuidance (0.00s)
+=== RUN   TestReadOnlyToolsAreSafe
+--- PASS: TestReadOnlyToolsAreSafe (0.00s)
+=== RUN   TestDestructiveToolsAreWrite
+--- PASS: TestDestructiveToolsAreWrite (0.00s)
+=== RUN   TestCredentialsToolNeverReturnsSecrets
+--- PASS: TestCredentialsToolNeverReturnsSecrets (0.01s)
+=== RUN   TestAllResourcesValid
+--- PASS: TestAllResourcesValid (0.00s)
+=== RUN   TestAllPromptsValid
+--- PASS: TestAllPromptsValid (0.00s)
+=== RUN   TestResourcesAndPromptsUseToolBearingToolsets
+--- PASS: TestResourcesAndPromptsUseToolBearingToolsets (0.00s)
+=== RUN   TestPromptsReusePersonaGuidance
+--- PASS: TestPromptsReusePersonaGuidance (0.00s)
+=== RUN   TestExecutionPrimitivesAreAnnotatedDestructive
+--- PASS: TestExecutionPrimitivesAreAnnotatedDestructive (0.00s)
+=== RUN   TestEveryWriteToolIsAnnotatedDestructive
+--- PASS: TestEveryWriteToolIsAnnotatedDestructive (0.00s)
+=== RUN   TestRecordingIsNotReadOnly
+--- PASS: TestRecordingIsNotReadOnly (0.00s)
+=== RUN   TestArbitraryExecutionIsNotInADefaultToolset
+--- PASS: TestArbitraryExecutionIsNotInADefaultToolset (0.00s)
+=== RUN   TestAppNoLongerExecutesByPath
+--- PASS: TestAppNoLongerExecutesByPath (0.00s)
+=== RUN   TestAppLaunchBlocksPlaintextURL
+--- PASS: TestAppLaunchBlocksPlaintextURL (0.00s)
+=== RUN   TestAppLaunchGateDecision
+--- PASS: TestAppLaunchGateDecision (0.00s)
+=== RUN   TestWin32InspectArgsRejectInvalidBoundsAndIdentity
+--- PASS: TestWin32InspectArgsRejectInvalidBoundsAndIdentity (0.00s)
+=== RUN   TestWin32InspectArgsExplicitNativeScope
+--- PASS: TestWin32InspectArgsExplicitNativeScope (0.00s)
+PASS

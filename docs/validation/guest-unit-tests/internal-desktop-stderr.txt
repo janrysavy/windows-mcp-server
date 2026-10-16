@@ -1,0 +1,8 @@
+2026/10/17 00:35:31 WARN failed to set per-monitor-v2 DPI awareness error="Access is denied."
+2026/10/17 00:35:31 WARN CoInitializeSecurity failed; WMI queries may be denied error="HRESULT 0x80010119: Security must be initialized before any interfaces are marshalled or unmarshalled. It cannot be changed once initialized."
+2026/10/17 00:35:31 WARN failed to set per-monitor-v2 DPI awareness error="Access is denied."
+2026/10/17 00:35:31 WARN CoInitializeSecurity failed; WMI queries may be denied error="HRESULT 0x80010119: Security must be initialized before any interfaces are marshalled or unmarshalled. It cannot be changed once initialized."
+2026/10/17 00:35:31 WARN failed to set per-monitor-v2 DPI awareness error="Access is denied."
+2026/10/17 00:35:31 WARN CoInitializeSecurity failed; WMI queries may be denied error="HRESULT 0x80010119: Security must be initialized before any interfaces are marshalled or unmarshalled. It cannot be changed once initialized."
+2026/10/17 00:35:31 WARN failed to set per-monitor-v2 DPI awareness error="Access is denied."
+2026/10/17 00:35:31 WARN CoInitializeSecurity failed; WMI queries may be denied error="HRESULT 0x80010119: Security must be initialized before any interfaces are marshalled or unmarshalled. It cannot be changed once initialized."

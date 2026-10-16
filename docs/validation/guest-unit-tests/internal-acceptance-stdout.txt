@@ -1,0 +1,40 @@
+=== RUN   TestCleanSessionSeals
+    audit_test.go:55: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestCleanSessionSeals (0.00s)
+=== RUN   TestSealedSessionDetectsTruncation
+    audit_test.go:80: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestSealedSessionDetectsTruncation (0.00s)
+=== RUN   TestUnsealedSessionIsLoudButUndetected
+    audit_test.go:112: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestUnsealedSessionIsLoudButUndetected (0.00s)
+=== RUN   TestKeyedChainCarriesItsMAC
+    audit_test.go:151: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestKeyedChainCarriesItsMAC (0.00s)
+=== RUN   TestEvidenceBundleRoundTrip
+    evidence_test.go:50: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestEvidenceBundleRoundTrip (0.00s)
+=== RUN   TestTamperedMemberFailsVerification
+    evidence_test.go:67: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestTamperedMemberFailsVerification (0.00s)
+=== RUN   TestDroppedMemberFailsVerification
+    evidence_test.go:83: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestDroppedMemberFailsVerification (0.00s)
+=== RUN   TestWrongKeyFailsWhileTheBundleStillHashVerifies
+    evidence_test.go:100: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestWrongKeyFailsWhileTheBundleStillHashVerifies (0.00s)
+=== RUN   TestJourneyArtifactsReachTheBundle
+    evidence_test.go:129: set WINDOWS_MCP_ACC=1 to run the acceptance suite (it drives a real VM)
+--- SKIP: TestJourneyArtifactsReachTheBundle (0.00s)
+=== RUN   TestPairedHarnessRefusesOnTheWire
+    paired_test.go:115: set WINDOWS_MCP_ACC_PAIRED=1 to run the paired harness+server slice (it drives two processes on the VM)
+--- SKIP: TestPairedHarnessRefusesOnTheWire (0.00s)
+=== RUN   TestPairedChannelLossCleansUpCredentials
+    paired_test.go:184: set WINDOWS_MCP_ACC_PAIRED=1 to run the paired harness+server slice (it drives two processes on the VM)
+--- SKIP: TestPairedChannelLossCleansUpCredentials (0.00s)
+=== RUN   TestRecorderManualPrep
+    recorder_test.go:27: set WINDOWS_MCP_ACC_RECORDER=1 to prepare the guest for the manual recorder check
+--- SKIP: TestRecorderManualPrep (0.00s)
+=== RUN   TestRecorderManualVerify
+    recorder_test.go:50: set WINDOWS_MCP_ACC_RECORDER=1 to verify a manually recorded journey
+--- SKIP: TestRecorderManualVerify (0.00s)
+PASS

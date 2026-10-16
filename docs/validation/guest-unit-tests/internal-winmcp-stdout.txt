@@ -1,0 +1,118 @@
+=== RUN   TestAnchorOnceOnlyAnchorsOnActivity
+--- PASS: TestAnchorOnceOnlyAnchorsOnActivity (0.00s)
+=== RUN   TestAnchorOnceNilWriterStillChains
+--- PASS: TestAnchorOnceNilWriterStillChains (0.00s)
+=== RUN   TestServedSurfaceValidatesAgainstTheNewestRevision
+=== RUN   TestServedSurfaceValidatesAgainstTheNewestRevision/every_tool
+=== RUN   TestServedSurfaceValidatesAgainstTheNewestRevision/tools/list_result
+=== RUN   TestServedSurfaceValidatesAgainstTheNewestRevision/capabilities
+=== RUN   TestServedSurfaceValidatesAgainstTheNewestRevision/handshake
+--- PASS: TestServedSurfaceValidatesAgainstTheNewestRevision (0.04s)
+    --- PASS: TestServedSurfaceValidatesAgainstTheNewestRevision/every_tool (0.01s)
+    --- PASS: TestServedSurfaceValidatesAgainstTheNewestRevision/tools/list_result (0.01s)
+    --- PASS: TestServedSurfaceValidatesAgainstTheNewestRevision/capabilities (0.00s)
+    --- PASS: TestServedSurfaceValidatesAgainstTheNewestRevision/handshake (0.00s)
+=== RUN   TestLoadCredentialsFileValid
+--- PASS: TestLoadCredentialsFileValid (0.00s)
+=== RUN   TestLoadCredentialsFileRejects
+=== RUN   TestLoadCredentialsFileRejects/missing_name
+=== RUN   TestLoadCredentialsFileRejects/missing_target
+=== RUN   TestLoadCredentialsFileRejects/missing_secret
+=== RUN   TestLoadCredentialsFileRejects/duplicate_name
+=== RUN   TestLoadCredentialsFileRejects/duplicate_target
+=== RUN   TestLoadCredentialsFileRejects/durable_persist
+=== RUN   TestLoadCredentialsFileRejects/malformed_json
+=== RUN   TestLoadCredentialsFileRejects/no_entries
+--- PASS: TestLoadCredentialsFileRejects (0.01s)
+    --- PASS: TestLoadCredentialsFileRejects/missing_name (0.00s)
+    --- PASS: TestLoadCredentialsFileRejects/missing_target (0.00s)
+    --- PASS: TestLoadCredentialsFileRejects/missing_secret (0.00s)
+    --- PASS: TestLoadCredentialsFileRejects/duplicate_name (0.00s)
+    --- PASS: TestLoadCredentialsFileRejects/duplicate_target (0.00s)
+    --- PASS: TestLoadCredentialsFileRejects/durable_persist (0.00s)
+    --- PASS: TestLoadCredentialsFileRejects/malformed_json (0.00s)
+    --- PASS: TestLoadCredentialsFileRejects/no_entries (0.00s)
+=== RUN   TestLoadCredentialsFileMissingPath
+--- PASS: TestLoadCredentialsFileMissingPath (0.00s)
+=== RUN   TestLoadCredentialsFileRejectsDirectory
+--- PASS: TestLoadCredentialsFileRejectsDirectory (0.00s)
+=== RUN   TestLoadCredentialsFileRejectsOversized
+--- PASS: TestLoadCredentialsFileRejectsOversized (0.00s)
+=== RUN   TestSecretBytesDecoding
+--- PASS: TestSecretBytesDecoding (0.00s)
+=== RUN   TestSecretBytesFastPathDoesNotAliasInput
+--- PASS: TestSecretBytesFastPathDoesNotAliasInput (0.00s)
+=== RUN   TestLoadCredentialsFileWipesFileBuffer
+--- PASS: TestLoadCredentialsFileWipesFileBuffer (0.00s)
+=== RUN   TestCredentialInfosOmitSecretsAndDefault
+--- PASS: TestCredentialInfosOmitSecretsAndDefault (0.00s)
+=== RUN   TestAllowUnmaskedTargetDefaultsOffAndPropagates
+--- PASS: TestAllowUnmaskedTargetDefaultsOffAndPropagates (0.00s)
+=== RUN   TestCredentialEntryDefaultsToMaskedTargets
+--- PASS: TestCredentialEntryDefaultsToMaskedTargets (0.00s)
+=== RUN   TestDefaultTypeAndPersist
+--- PASS: TestDefaultTypeAndPersist (0.00s)
+=== RUN   TestAuditViewHasNoSecret
+--- PASS: TestAuditViewHasNoSecret (0.00s)
+=== RUN   TestWithToolsetKeepsDefaults
+--- PASS: TestWithToolsetKeepsDefaults (0.00s)
+=== RUN   TestErrNoCredentialsIsMatchable
+--- PASS: TestErrNoCredentialsIsMatchable (0.00s)
+=== RUN   TestFirstLineSupportWithCredentialsRefusesByDefault
+--- PASS: TestFirstLineSupportWithCredentialsRefusesByDefault (0.00s)
+=== RUN   TestUnmaskedTargetsWidenTheExposureSet
+--- PASS: TestUnmaskedTargetsWidenTheExposureSet (0.00s)
+=== RUN   TestBusinessUserWithCredentialsIsFine
+--- PASS: TestBusinessUserWithCredentialsIsFine (0.00s)
+=== RUN   TestCredentialsFileACLAcceptsAnOwnerOnlyFile
+--- PASS: TestCredentialsFileACLAcceptsAnOwnerOnlyFile (0.02s)
+=== RUN   TestCredentialsFileACLRejectsUnanticipatedTrustees
+--- PASS: TestCredentialsFileACLRejectsUnanticipatedTrustees (0.03s)
+=== RUN   TestCredentialsFileACLRejectsEveryone
+--- PASS: TestCredentialsFileACLRejectsEveryone (0.03s)
+=== RUN   TestServerDefaultPolicyIsAuditOnly
+--- PASS: TestServerDefaultPolicyIsAuditOnly (0.00s)
+=== RUN   TestHarnessModeSkipsLocalProxyOnlyWhenPortAnnounced
+--- PASS: TestHarnessModeSkipsLocalProxyOnlyWhenPortAnnounced (0.01s)
+=== RUN   TestDelegatedEgressStillRefusesUnelevatedEnforcement
+    egress_test.go:69: running elevated; the refusal under test cannot fire
+--- SKIP: TestDelegatedEgressStillRefusesUnelevatedEnforcement (0.01s)
+=== RUN   TestGuardrailEnvCarriesEnforceHTTPS
+--- PASS: TestGuardrailEnvCarriesEnforceHTTPS (0.00s)
+=== RUN   TestShippedPolicyExamplesValidate
+--- PASS: TestShippedPolicyExamplesValidate (0.01s)
+=== RUN   TestShippedExampleJourneysCompile
+=== RUN   TestShippedExampleJourneysCompile/notepad-smoke.json
+--- PASS: TestShippedExampleJourneysCompile (0.00s)
+    --- PASS: TestShippedExampleJourneysCompile/notepad-smoke.json (0.00s)
+=== RUN   TestToolsListOrderIsDeterministic
+--- PASS: TestToolsListOrderIsDeterministic (0.03s)
+=== RUN   TestPlanningToolsetServesPlanAndApply
+--- PASS: TestPlanningToolsetServesPlanAndApply (0.00s)
+=== RUN   TestShippedPolicyFixturesPass
+--- PASS: TestShippedPolicyFixturesPass (0.01s)
+=== RUN   TestProductSpecGate
+--- PASS: TestProductSpecGate (0.08s)
+=== RUN   TestGuardrailToolsAlwaysServed
+--- PASS: TestGuardrailToolsAlwaysServed (0.00s)
+=== RUN   TestGuardrailToolsAbsentFromPolicyIndex
+--- PASS: TestGuardrailToolsAbsentFromPolicyIndex (0.00s)
+=== RUN   TestProtectedPathsCoverGuardrailFiles
+=== RUN   TestProtectedPathsCoverGuardrailFiles/read_credentials_denied
+=== RUN   TestProtectedPathsCoverGuardrailFiles/write_credentials_denied
+=== RUN   TestProtectedPathsCoverGuardrailFiles/read_policy_allowed
+=== RUN   TestProtectedPathsCoverGuardrailFiles/write_policy_denied
+=== RUN   TestProtectedPathsCoverGuardrailFiles/read_audit_allowed
+=== RUN   TestProtectedPathsCoverGuardrailFiles/write_audit_file_denied
+=== RUN   TestProtectedPathsCoverGuardrailFiles/write_audit_manifest_denied
+=== RUN   TestProtectedPathsCoverGuardrailFiles/unrelated_file_allowed
+--- PASS: TestProtectedPathsCoverGuardrailFiles (0.00s)
+    --- PASS: TestProtectedPathsCoverGuardrailFiles/read_credentials_denied (0.00s)
+    --- PASS: TestProtectedPathsCoverGuardrailFiles/write_credentials_denied (0.00s)
+    --- PASS: TestProtectedPathsCoverGuardrailFiles/read_policy_allowed (0.00s)
+    --- PASS: TestProtectedPathsCoverGuardrailFiles/write_policy_denied (0.00s)
+    --- PASS: TestProtectedPathsCoverGuardrailFiles/read_audit_allowed (0.00s)
+    --- PASS: TestProtectedPathsCoverGuardrailFiles/write_audit_file_denied (0.00s)
+    --- PASS: TestProtectedPathsCoverGuardrailFiles/write_audit_manifest_denied (0.00s)
+    --- PASS: TestProtectedPathsCoverGuardrailFiles/unrelated_file_allowed (0.00s)
+PASS

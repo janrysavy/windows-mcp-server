@@ -1,0 +1,129 @@
+=== RUN   TestAVIRefusesFrameBeyondFormatLimit
+--- PASS: TestAVIRefusesFrameBeyondFormatLimit (0.00s)
+=== RUN   TestAVIStaysValidAfterHittingTheLimit
+--- PASS: TestAVIStaysValidAfterHittingTheLimit (0.00s)
+=== RUN   TestAVIFitsAccountsForIndexGrowth
+--- PASS: TestAVIFitsAccountsForIndexGrowth (0.00s)
+=== RUN   TestAVIOddFrameAccountsForPadding
+--- PASS: TestAVIOddFrameAccountsForPadding (0.00s)
+=== RUN   TestScreenCoordRejectsOutOfRange
+--- PASS: TestScreenCoordRejectsOutOfRange (0.00s)
+=== RUN   TestScreenCoordAcceptsValidIncludingNegative
+--- PASS: TestScreenCoordAcceptsValidIncludingNegative (0.00s)
+=== RUN   TestScreenCoordErrorNamesTheAxis
+--- PASS: TestScreenCoordErrorNamesTheAxis (0.00s)
+=== RUN   TestScreenPointValidatesBothAxes
+--- PASS: TestScreenPointValidatesBothAxes (0.00s)
+=== RUN   TestSetCursorRejectsBeforeSyscall
+--- PASS: TestSetCursorRejectsBeforeSyscall (0.00s)
+=== RUN   TestCredentialTypeMapping
+--- PASS: TestCredentialTypeMapping (0.00s)
+=== RUN   TestCredentialPersistMapping
+--- PASS: TestCredentialPersistMapping (0.00s)
+=== RUN   TestUTF16BlobRoundTrip
+--- PASS: TestUTF16BlobRoundTrip (0.00s)
+=== RUN   TestZeroWipesBuffers
+--- PASS: TestZeroWipesBuffers (0.00s)
+=== RUN   TestWriteCredentialValidates
+--- PASS: TestWriteCredentialValidates (0.00s)
+=== RUN   TestInjectRejectsWriteOnlyType
+--- PASS: TestInjectRejectsWriteOnlyType (0.00s)
+=== RUN   TestCredentialRoundTrip
+--- PASS: TestCredentialRoundTrip (0.01s)
+=== RUN   TestInjectionPayloadMatchesStoredSecret
+--- PASS: TestInjectionPayloadMatchesStoredSecret (0.00s)
+=== RUN   TestReadSecretUnitsMissingTarget
+--- PASS: TestReadSecretUnitsMissingTarget (0.00s)
+=== RUN   TestWriteCredentialZeroesSecretBlob
+--- PASS: TestWriteCredentialZeroesSecretBlob (0.00s)
+=== RUN   TestUTF16BytesRoundTrips
+--- PASS: TestUTF16BytesRoundTrips (0.00s)
+=== RUN   TestEngineLifecycleAndRoot
+--- PASS: TestEngineLifecycleAndRoot (0.10s)
+=== RUN   TestClipboardRoundTrip
+--- PASS: TestClipboardRoundTrip (0.00s)
+=== RUN   TestScreenshotProducesPNG
+--- PASS: TestScreenshotProducesPNG (0.07s)
+=== RUN   TestDisplaysNonEmpty
+--- PASS: TestDisplaysNonEmpty (0.00s)
+=== RUN   TestSnapshotCaptures
+--- PASS: TestSnapshotCaptures (0.26s)
+=== RUN   TestKeyNameToVK
+--- PASS: TestKeyNameToVK (0.00s)
+=== RUN   TestSyntheticInputIsBounded
+--- PASS: TestSyntheticInputIsBounded (0.00s)
+=== RUN   TestTranslateKey
+=== RUN   TestTranslateKey/lowercase_letter
+=== RUN   TestTranslateKey/shift_upper
+=== RUN   TestTranslateKey/caps_upper
+=== RUN   TestTranslateKey/shift_and_caps_cancel
+=== RUN   TestTranslateKey/digit
+=== RUN   TestTranslateKey/shifted_digit_is_a_symbol
+=== RUN   TestTranslateKey/oem_semicolon
+=== RUN   TestTranslateKey/shifted_oem_semicolon
+=== RUN   TestTranslateKey/space
+=== RUN   TestTranslateKey/enter_is_a_named_key
+=== RUN   TestTranslateKey/tab_is_a_named_key
+=== RUN   TestTranslateKey/shift_alone_is_ignored
+=== RUN   TestTranslateKey/the_stop_key_F9_is_never_emitted
+--- PASS: TestTranslateKey (0.00s)
+    --- PASS: TestTranslateKey/lowercase_letter (0.00s)
+    --- PASS: TestTranslateKey/shift_upper (0.00s)
+    --- PASS: TestTranslateKey/caps_upper (0.00s)
+    --- PASS: TestTranslateKey/shift_and_caps_cancel (0.00s)
+    --- PASS: TestTranslateKey/digit (0.00s)
+    --- PASS: TestTranslateKey/shifted_digit_is_a_symbol (0.00s)
+    --- PASS: TestTranslateKey/oem_semicolon (0.00s)
+    --- PASS: TestTranslateKey/shifted_oem_semicolon (0.00s)
+    --- PASS: TestTranslateKey/space (0.00s)
+    --- PASS: TestTranslateKey/enter_is_a_named_key (0.00s)
+    --- PASS: TestTranslateKey/tab_is_a_named_key (0.00s)
+    --- PASS: TestTranslateKey/shift_alone_is_ignored (0.00s)
+    --- PASS: TestTranslateKey/the_stop_key_F9_is_never_emitted (0.00s)
+=== RUN   TestAgentMarkersCannotForgeSecurityEvents
+--- PASS: TestAgentMarkersCannotForgeSecurityEvents (0.00s)
+=== RUN   TestAgentMarkerLabelIsBounded
+--- PASS: TestAgentMarkerLabelIsBounded (0.00s)
+=== RUN   TestToastCommandTypeLoadsAreIntact
+--- PASS: TestToastCommandTypeLoadsAreIntact (0.00s)
+=== RUN   TestToastCommandEscapesSingleQuotes
+--- PASS: TestToastCommandEscapesSingleQuotes (0.00s)
+=== RUN   TestToastCommandEscapesMarkup
+--- PASS: TestToastCommandEscapesMarkup (0.00s)
+=== RUN   TestScrollDirectionIsIndependentOfClickCount
+--- PASS: TestScrollDirectionIsIndependentOfClickCount (0.00s)
+=== RUN   TestScrollDirectionUnknownScrollsDown
+--- PASS: TestScrollDirectionUnknownScrollsDown (0.00s)
+=== RUN   TestBoundWheelClicks
+--- PASS: TestBoundWheelClicks (0.00s)
+=== RUN   TestBoundWheelClicksKeepsTheCallShort
+--- PASS: TestBoundWheelClicksKeepsTheCallShort (0.00s)
+=== RUN   TestSelectTargetsFallbackDoesNotDuplicate
+--- PASS: TestSelectTargetsFallbackDoesNotDuplicate (0.00s)
+=== RUN   TestSelectTargetsForegroundLeadsAndAppearsOnce
+--- PASS: TestSelectTargetsForegroundLeadsAndAppearsOnce (0.00s)
+=== RUN   TestSelectTargetsMinimizedExcluded
+--- PASS: TestSelectTargetsMinimizedExcluded (0.00s)
+=== RUN   TestSelectTargetsSingleWindowOnly
+--- PASS: TestSelectTargetsSingleWindowOnly (0.00s)
+=== RUN   TestSelectTargetsAllMinimized
+--- PASS: TestSelectTargetsAllMinimized (0.00s)
+=== RUN   TestSelectTargetsMinimizedForegroundStillLeads
+--- PASS: TestSelectTargetsMinimizedForegroundStillLeads (0.00s)
+=== RUN   TestSelectTargetsEmpty
+--- PASS: TestSelectTargetsEmpty (0.00s)
+=== RUN   TestServerOwnVarsAreWithheldFromChildren
+--- PASS: TestServerOwnVarsAreWithheldFromChildren (0.00s)
+=== RUN   TestIsServerOwnVar
+--- PASS: TestIsServerOwnVar (0.00s)
+=== RUN   TestMergePath
+--- PASS: TestMergePath (0.00s)
+=== RUN   TestEnvMapExpand
+--- PASS: TestEnvMapExpand (0.00s)
+=== RUN   TestEnvMapCaseInsensitive
+--- PASS: TestEnvMapCaseInsensitive (0.00s)
+=== RUN   TestEscapeWQLLike
+--- PASS: TestEscapeWQLLike (0.00s)
+=== RUN   TestEscapeWQLLikeNeutralisesWildcardKill
+--- PASS: TestEscapeWQLLikeNeutralisesWildcardKill (0.00s)
+PASS

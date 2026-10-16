@@ -1,0 +1,16 @@
+=== RUN   TestScreenshotProducesPNG
+    engine_test.go:52: Screenshot: BitBlt: The handle is invalid.
+--- FAIL: TestScreenshotProducesPNG (0.02s)
+=== RUN   TestScreenshotProducesPNG
+    engine_test.go:52: Screenshot: BitBlt: The handle is invalid.
+--- FAIL: TestScreenshotProducesPNG (0.01s)
+=== RUN   TestScreenshotProducesPNG
+    engine_test.go:52: Screenshot: BitBlt: The handle is invalid.
+--- FAIL: TestScreenshotProducesPNG (0.01s)
+=== RUN   TestScreenshotProducesPNG
+    engine_test.go:52: Screenshot: BitBlt: The handle is invalid.
+--- FAIL: TestScreenshotProducesPNG (0.01s)
+=== RUN   TestScreenshotProducesPNG
+    engine_test.go:52: Screenshot: BitBlt: The handle is invalid.
+--- FAIL: TestScreenshotProducesPNG (0.01s)
+FAIL

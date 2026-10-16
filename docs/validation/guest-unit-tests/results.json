@@ -1,0 +1,47 @@
+﻿{
+    "User":  "WDAGUtilityAccount",
+    "Computer":  "CC8FB5B2-5B25-4",
+    "RunDirectory":  "C:\\BuildOutput\\controller-private\\unit-tests-6c1281d31b6842f794c38ecab1c1ae69",
+    "Results":  [
+                    {
+                        "Package":  "internal/desktop",
+                        "ExitCode":  0,
+                        "TimedOut":  false,
+                        "PassCount":  64,
+                        "SkipCount":  0,
+                        "FailCount":  0
+                    },
+                    {
+                        "Package":  "internal/psdata",
+                        "ExitCode":  0,
+                        "TimedOut":  false,
+                        "PassCount":  4,
+                        "SkipCount":  0,
+                        "FailCount":  0
+                    },
+                    {
+                        "Package":  "internal/winmcp",
+                        "ExitCode":  0,
+                        "TimedOut":  false,
+                        "PassCount":  57,
+                        "SkipCount":  1,
+                        "FailCount":  0
+                    },
+                    {
+                        "Package":  "pkg/windows",
+                        "ExitCode":  0,
+                        "TimedOut":  false,
+                        "PassCount":  26,
+                        "SkipCount":  0,
+                        "FailCount":  0
+                    },
+                    {
+                        "Package":  "internal/acceptance",
+                        "ExitCode":  0,
+                        "TimedOut":  false,
+                        "PassCount":  0,
+                        "SkipCount":  13,
+                        "FailCount":  0
+                    }
+                ]
+}

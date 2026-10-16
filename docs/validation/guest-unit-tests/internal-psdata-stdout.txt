@@ -1,0 +1,9 @@
+=== RUN   TestBoundValueNeverReachesTheScriptBody
+--- PASS: TestBoundValueNeverReachesTheScriptBody (0.00s)
+=== RUN   TestScriptBodyIsSyntacticallyIsolated
+--- PASS: TestScriptBodyIsSyntacticallyIsolated (0.00s)
+=== RUN   TestNoBindingsLeavesBodyUnchanged
+--- PASS: TestNoBindingsLeavesBodyUnchanged (0.00s)
+=== RUN   TestEncodedValueUsesOnlyInertCharacters
+--- PASS: TestEncodedValueUsesOnlyInertCharacters (0.00s)
+PASS

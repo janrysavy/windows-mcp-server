@@ -1,0 +1,32 @@
+{
+  "Date": "2026-10-17",
+  "Go": "1.27.2 windows/amd64",
+  "ServerSource": "837620e",
+  "ServerSha256": "6519f3e6a6795a1322319eb4859206d546383ad7276aca6655f49ed63ad96634",
+  "Networking": "Disabled",
+  "Checks": [
+    "guest fixture enumerated in Snapshot",
+    "Type completed against fixture edit",
+    "Invoke completed against fixture button",
+    "native HWND hierarchy, Unicode text, hidden/password controls, limits and PID guard verified",
+    "guest PNG screenshot returned over file relay"
+  ],
+  "Fixture": {
+    "Computer": "CC8FB5B2-5B25-4",
+    "User": "WDAGUtilityAccount",
+    "PID": 11012,
+    "Text": "sandbox-only probe žluťoučký 🎯 62bd8682",
+    "Applied": true
+  },
+  "Native": {
+    "visibleCount": 6,
+    "allCount": 7,
+    "fixturePointerBits": 32,
+    "wrongPidRejected": true,
+    "countLimitEnforced": true,
+    "passwordOmitted": true,
+    "unicodeTextVerified": true,
+    "hiddenFilteringVerified": true
+  },
+  "Passed": true
+}

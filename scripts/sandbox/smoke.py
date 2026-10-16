@@ -116,6 +116,43 @@ def main():
         if evidence.get("User") != "WDAGUtilityAccount" or evidence.get("Text") != probe_text:
             raise RuntimeError("Guest fixture did not confirm text and invocation")
         report["fixture"] = evidence
+        if "Win32Windows" in report["tools"]:
+            ready_file = Path(args.output_root) / "controller-private/fixture-ready.json"
+            ready = json.loads(ready_file.read_text(encoding="utf-8-sig"))
+            if ready["PID"] != evidence["PID"]:
+                raise RuntimeError("Fixture identity changed")
+            scope = {"pid": ready["PID"], "root_hwnd": ready["HWND"]}
+            native = json.loads(text(client.call("Win32Windows", scope)))
+            if native["truncated"] or any(row["pid"] != ready["PID"] for row in native["windows"]):
+                raise RuntimeError("Unexpected PID or truncation in native fixture enumeration")
+            if any("text" in row for row in native["windows"]):
+                raise RuntimeError("Native default inspection unexpectedly returned text")
+            handles = {row["hwnd"] for row in native["windows"]}
+            if len(handles) < 5 or not any(row["parent_hwnd"] in handles for row in native["windows"]):
+                raise RuntimeError("Native child hierarchy missing")
+            visible = native
+            native = json.loads(text(client.call("Win32Windows", dict(scope, read_text=True, include_hidden=True))))
+            if not any(row.get("text") == probe_text for row in native["windows"]):
+                raise RuntimeError("WM_GETTEXT did not return the actual Unicode edit contents")
+            if not any(row["text_status"] == "password_omitted" for row in native["windows"]):
+                raise RuntimeError("Password edit was not omitted")
+            hidden = [row for row in native["windows"] if row["hwnd"] == ready["HiddenHWND"]]
+            if len(hidden) != 1 or hidden[0]["visible"] or ready["HiddenHWND"] in handles:
+                raise RuntimeError("Hidden descendant filtering failed")
+            limited = json.loads(text(client.call("Win32Windows", dict(scope, max_windows=1))))
+            if len(limited["windows"]) != 1 or not limited["truncated"]:
+                raise RuntimeError("Native result limit was not enforced")
+            rejected = client.send("tools/call", {"name": "Win32Windows",
+                                   "arguments": dict(scope, pid=ready["PID"]+1)})
+            if not rejected.get("isError"):
+                raise RuntimeError("Native root accepted the wrong expected PID")
+            report["native"] = {"visibleCount": len(visible["windows"]),
+                                "allCount": len(native["windows"]),
+                                "fixturePointerBits": ready["PointerBits"],
+                                "wrongPidRejected": True, "countLimitEnforced": True,
+                                "passwordOmitted": True, "unicodeTextVerified": True,
+                                "hiddenFilteringVerified": True}
+            report["checks"].append("native HWND hierarchy, Unicode text, hidden/password controls, limits and PID guard verified")
         capture = client.call("Screenshot")
         images = [item for item in capture["content"] if item["type"] == "image"]
         if len(images) != 1 or images[0]["mimeType"] != "image/png":
