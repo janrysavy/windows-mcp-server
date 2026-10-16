@@ -21,6 +21,7 @@ further than looking at the screen.
 | Tool | Does |
 |---|---|
 | `Snapshot` | The foreground window plus a labeled tree of interactive elements. The perception primitive — most loops start here |
+| `Win32Windows` | Native HWNDs, descendant hierarchy, class/control IDs, styles and opt-in bounded text; [reference](win32-window-inspection.md) |
 | `Screenshot` | A PNG of the entire virtual desktop (all monitors) |
 | `DisplayInventory` | Connected displays: bounds, work area, DPI, scale |
 | `Recording` | Session-recording status, and timeline markers |
